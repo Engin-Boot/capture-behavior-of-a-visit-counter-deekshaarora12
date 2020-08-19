@@ -10,6 +10,8 @@ Scenario: Show patient visits during working days and holidays
 
 Scenario: Compute parking slots to reserve for visiting specialists
 
-  Given
-  When
-  Then
+  Given the hospital is open and a card reading machine with a specialist QR-card
+  When the car enters the parking
+  And the card reading machine reads the card of specialist
+  Then it displays a red light for specialist and green light
+  for patient updates the slot filled and reports to the director
