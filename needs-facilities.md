@@ -2,7 +2,7 @@
 
 Scenario: Report visitor trends during a week of operation
 
-  Given
+  Given the hospital is open,
   When
   Then
 
